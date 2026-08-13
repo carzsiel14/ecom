@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce UI/UX & Conversion Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-out;
+            transform: translateY(20px);
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 8rem;
+            box-sizing: border-box;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            z-index: 10;
+        }
+
+        .slide-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        /* Responsive padding for smaller screens */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem;
+            }
+        }
+
+        /* Highlight text gradient */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #38bdf8, #818cf8);
+        }
+
+        /* Glassmorphism cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-800 z-50">
+        <div id="progress" class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 transition-all duration-300" style="width: 0%;"></div>
+    </div>
+
+    <!-- Presentation Container -->
+    <div class="slide-container" id="presentation">
+
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/670c76675e202331a939d43a_what-is-a-design-system-cover.webp" alt="Design Background" class="slide-bg-image" onerror="this.style.display='none'">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="inline-block p-4 mb-6 rounded-2xl bg-indigo-500/20 text-indigo-300 text-sm font-semibold tracking-widest uppercase border border-indigo-500/30">
+                    Week 7 Module
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
+                    E-Commerce UI/UX & <br> <span class="text-gradient">Conversion Optimization</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                    Connecting our backend database schemas and infrastructure architectures to user-facing designs that drive sales.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Where We Are -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Where We Are in the Process</h2>
+                <p class="text-xl text-slate-400 mb-12">Before we optimize the front-end, let's recall how our prior technical planning enables today's designs.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    <!-- Connecting Line -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-700 -z-10 transform -translate-y-1/2"></div>
+                    
+                    <div class="glass-card p-6 flex flex-col items-center text-center opacity-60">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 mb-4 border border-slate-600">
+                            <i class="fas fa-server text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-300">Week 3: Infra</h3>
+                        <p class="text-sm text-slate-500 mt-2">Mobile vs. Desktop architectures & network maps.</p>
+                    </div>
+
+                    <div class="glass-card p-6 flex flex-col items-center text-center opacity-60">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 mb-4 border border-slate-600">
+                            <i class="fas fa-sitemap text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-300">Week 4: Scope</h3>
+                        <p class="text-sm text-slate-500 mt-2">Defining Admin vs. Customer roles and boundaries.</p>
+                    </div>
+
+                    <div class="glass-card p-6 flex flex-col items-center text-center opacity-60">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 mb-4 border border-slate-600">
+                            <i class="fas fa-database text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-300">Week 5: Schema</h3>
+                        <p class="text-sm text-slate-500 mt-2">Architecting the database for inventory & tracking.</p>
+                    </div>
+
+                    <div class="glass-card p-6 flex flex-col items-center text-center ring-2 ring-sky-500 transform scale-105">
+                        <div class="w-16 h-16 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 mb-4 border border-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+                            <i class="fas fa-paint-brush text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-sky-300">Week 7: UI/UX</h3>
+                        <p class="text-sm text-slate-300 mt-2">Visualizing the data to optimize conversions (CRO).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Definitions -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center">What are <span class="text-sky-400">UI</span>, <span class="text-indigo-400">UX</span>, and <span class="text-emerald-400">CRO</span>?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="glass-card p-8 border-t-4 border-t-sky-400">
+                        <h3 class="text-2xl font-bold text-sky-400 mb-4"><i class="fas fa-layer-group mr-2"></i> UI</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>User Interface:</strong> The visual layout—buttons, menus, typography, and grids. This is how we visually present our Week 5 Database Schemas to the user.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 border-t-4 border-t-indigo-400">
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-4"><i class="fas fa-route mr-2"></i> UX</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>User Experience:</strong> The psychological journey. Is it intuitive to navigate from a product page to checkout based on the logic we defined in Week 4?
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 border-t-4 border-t-emerald-400">
+                        <h3 class="text-2xl font-bold text-emerald-400 mb-4"><i class="fas fa-chart-line mr-2"></i> CRO</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            <strong>Conversion Rate Optimization:</strong> Applying data-driven design principles to ensure the maximum percentage of site visitors actually complete a purchase.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-slate-200">
+                        <i class="fas fa-exclamation-triangle text-red-400 mr-2"></i> 
+                        A brilliant backend is useless if the UI/UX introduces friction that prevents users from checking out.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Math Behind Design -->
+        <div class="slide">
+            <div class="max-w-5xl mx-auto w-full text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">The Math Behind the Design</h2>
+                <h3 class="text-2xl text-slate-400 mb-16">Why CRO Matters</h3>
+                
+                <div class="py-16 px-8 glass-card border border-indigo-500/30 shadow-[0_0_50px_rgba(99,102,241,0.15)] relative overflow-hidden mb-12">
+                    <div class="absolute inset-0 bg-gradient-to-r from-sky-500/10 to-indigo-500/10 pointer-events-none"></div>
+                    <h1 class="text-8xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 to-sky-500 drop-shadow-lg mb-6">
+                        2.5%
+                    </h1>
+                    <p class="text-2xl md:text-3xl font-bold tracking-widest text-slate-200 uppercase">
+                        Average E-Commerce <br>Conversion Rate
+                    </p>
+                </div>
+                
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                    Most e-commerce stores convert between <strong>2% and 3%</strong> of their traffic. Small design tweaks can yield massive revenue increases without requiring more server bandwidth.
+                </p>
+                <p class="text-sm text-slate-500 mt-4">(AOV = Average Order Value)</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Backend to Frontend -->
+        <div class="slide">
+            <div class="max-w-7xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">Translating Backend to Frontend</h2>
+                <p class="text-xl text-slate-400 mb-12 text-center">How does our Week 5 ERD dictate our UI design today?</p>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-stretch">
+                    <!-- Database Side -->
+                    <div class="flex-1 glass-card p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fas fa-database text-3xl text-indigo-400"></i>
+                            <h3 class="text-2xl font-bold">Week 5: Database Schema</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6">In Week 5, we structured our relational database to track specific product attributes. A typical <code class="bg-slate-800 px-2 py-1 rounded text-sky-300">products</code> table includes:</p>
+                        
+                        <ul class="space-y-4 font-mono text-sm">
+                            <li class="bg-slate-800 p-3 rounded border-l-4 border-indigo-500 flex justify-between">
+                                <span>product_name</span> <span class="text-slate-500">VARCHAR</span>
+                            </li>
+                            <li class="bg-slate-800 p-3 rounded border-l-4 border-indigo-500 flex justify-between">
+                                <span>price</span> <span class="text-slate-500">DECIMAL</span>
+                            </li>
+                            <li class="bg-slate-800 p-3 rounded border-l-4 border-indigo-500 flex justify-between">
+                                <span>stock_quantity</span> <span class="text-slate-500">INT</span>
+                            </li>
+                            <li class="bg-slate-800 p-3 rounded border-l-4 border-indigo-500 flex flex-col">
+                                <div class="flex justify-between"><span>product_variations</span> <span class="text-slate-500">JSON/FK</span></div>
+                                <span class="text-xs text-slate-400 mt-1">mapping sizes/colors</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Arrow -->
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-arrow-right text-4xl text-slate-600 hidden md:block"></i>
+                        <i class="fas fa-arrow-down text-4xl text-slate-600 md:hidden"></i>
+                    </div>
+
+                    <!-- UI Side -->
+                    <div class="flex-1 glass-card p-8 border-t-4 border-t-sky-500">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fas fa-desktop text-3xl text-sky-400"></i>
+                            <h3 class="text-2xl font-bold">Week 7: UI Requirements</h3>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6">The UI must fetch and display these exact fields elegantly to the customer:</p>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 shrink-0"><i class="fas fa-heading"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">Prominent Title & Price</h4>
+                                    <p class="text-sm text-slate-400">Clear formatting for immediate recognition.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 shrink-0"><i class="fas fa-sliders-h"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">Dynamic Dropdowns</h4>
+                                    <p class="text-sm text-slate-400">Color/Size selectors tied to variation data.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 shrink-0"><i class="fas fa-fire"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-200">Scarcity Triggers</h4>
+                                    <p class="text-sm text-slate-400">e.g., "Only 2 left in stock!" (driven by stock_quantity).</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Landing Page -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Optimizing the Landing Page</h2>
+                    <h3 class="text-2xl text-sky-400 mb-8 font-semibold">Visual Hierarchy drives Action</h3>
+                    
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                        The product landing page is where conversions are born. Based on our requirements analysis, we must prioritize clarity.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-xl mt-1"></i>
+                            <p class="text-slate-200">Use <strong>high-quality product imagery</strong> as the primary focal point.</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-xl mt-1"></i>
+                            <p class="text-slate-200">Ensure the <strong>"Add to Cart"</strong> Call-to-Action (CTA) is the most vibrant element on the page.</p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-xl mt-1"></i>
+                            <p class="text-slate-200"><strong>Minimize clutter</strong>—only show data fields (specs, reviews) that aid the buying decision.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-2 rounded-xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                    <img src="https://www.slidekit.com/wp-content/uploads/2024/12/Free-Website-Mockup-Template-for-PowerPoint-Google-Slides.jpg" 
+                         alt="Website Mockup" 
+                         class="rounded-lg w-full h-auto"
+                         onerror="this.src='https://placehold.co/800x600/1e293b/38bdf8?text=Landing+Page+Mockup'">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Mobile -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 flex justify-center">
+                     <img src="https://cdn.dribbble.com/userupload/46536397/file/68dc85d90f53ea3a4bac4c41830400b4.png?resize=752x&vertical=center" 
+                         alt="Mobile UI" 
+                         class="rounded-[2.5rem] h-[600px] w-auto border-8 border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                         onerror="this.src='https://placehold.co/375x812/1e293b/818cf8?text=Mobile+App+UI'">
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="inline-block px-3 py-1 mb-4 rounded-full bg-slate-800 text-slate-400 text-xs font-semibold tracking-wide border border-slate-700">
+                        Recall Week 3: Mobile Architecture
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Designing for the Thumbs</h2>
+                    
+                    <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                        In Week 3, we analyzed Mobile Commerce vs. Desktop Infrastructure. Today, over <strong>60% of e-commerce traffic is mobile</strong>. Your UI must adapt.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-5 border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-lg text-indigo-300 mb-1 flex items-center gap-2"><i class="fas fa-hand-pointer"></i> Tap Targets</h4>
+                            <p class="text-sm text-slate-400">Buttons must be at least <strong>44x44 pixels</strong> to prevent user frustration.</p>
+                        </div>
+                        
+                        <div class="glass-card p-5 border-l-4 border-sky-500">
+                            <h4 class="font-bold text-lg text-sky-300 mb-1 flex items-center gap-2"><i class="fas fa-magnet"></i> Sticky Elements</h4>
+                            <p class="text-sm text-slate-400">Keep the <strong>"Add to Cart"</strong> button anchored to the bottom of the screen while scrolling.</p>
+                        </div>
+                        
+                        <div class="glass-card p-5 border-l-4 border-emerald-500">
+                            <h4 class="font-bold text-lg text-emerald-300 mb-1 flex items-center gap-2"><i class="fas fa-bolt"></i> Speed</h4>
+                            <p class="text-sm text-slate-400">Mobile networks vary. <strong>Optimize image assets</strong> so the UI doesn't block the backend data fetching.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Shopping Cart Experience -->
+        <div class="slide">
+            <div class="max-w-5xl mx-auto w-full text-center">
+                <img src="https://static.vecteezy.com/system/resources/previews/012/896/682/non_2x/3d-shop-trolley-icon-white-shopping-cart-with-red-megaphone-float-isolated-on-transparent-digital-market-online-e-commerce-concept-sale-promotion-business-cartoon-style-3d-render-png.png" 
+                     alt="Shopping Cart 3D" 
+                     class="h-64 mx-auto mb-8 drop-shadow-[0_20px_30px_rgba(255,255,255,0.1)]"
+                     onerror="this.style.display='none';">
+                
+                <h2 class="text-5xl md:text-6xl font-black mb-6 text-gradient">The Shopping Cart Experience</h2>
+                
+                <div class="glass-card p-8 inline-block mt-4 max-w-2xl mx-auto border border-white/10">
+                    <p class="text-2xl text-slate-300 leading-relaxed font-light">
+                        Transitioning the user from browsing to the checkout phase requires <strong>seamless visibility</strong> and <strong>state management</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Cart Visibility -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Cart Visibility & Previewing Week 9</h2>
+                <h3 class="text-2xl text-red-400 mb-10 font-semibold">Never Let Them Forget</h3>
+                
+                <p class="text-xl text-slate-300 mb-12">
+                    A hidden cart leads to abandoned carts. UX principles dictate that the cart state should <strong>always be visible</strong>.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                    <div class="glass-card p-8 flex items-start gap-6">
+                        <div class="text-4xl text-sky-400"><i class="fas fa-shopping-bag"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Dynamic Cart Icon</h4>
+                            <p class="text-slate-400">Use a dynamic cart icon in the navigation bar showing real-time item counts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-8 flex items-start gap-6">
+                        <div class="text-4xl text-indigo-400"><i class="fas fa-door-open"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Slide-out Drawer</h4>
+                            <p class="text-slate-400">Implement a "drawer" cart to let users review items without leaving the product page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-indigo-900/40 border border-indigo-500/50 p-6 rounded-xl flex items-center gap-6">
+                    <div class="p-3 bg-indigo-500 rounded-lg text-white">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-indigo-300 text-lg">Preview of Week 9: Session Management</h4>
+                        <p class="text-sm text-slate-300 mt-1">
+                            The UI we design today will soon be powered by the backend Session Management we configure in Week 9 to ensure carts persist even if the user closes the tab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Checkout Friction -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Minimizing Checkout Friction</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Guest Checkout -->
+                    <div class="glass-card p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl transform group-hover:scale-110 transition-transform"><i class="fas fa-user-times"></i></div>
+                        <h3 class="text-2xl font-bold text-sky-400 mb-4 border-b border-white/10 pb-4">Guest Checkout</h3>
+                        <p class="text-sm text-slate-300 mb-4">
+                            Forcing account creation is the <strong>#1 cause of cart abandonment</strong>.
+                        </p>
+                        <p class="text-sm text-slate-400">
+                            Always provide a friction-less "Guest Checkout" option, requesting only essential delivery data.
+                        </p>
+                    </div>
+
+                    <!-- Form Optimization -->
+                    <div class="glass-card p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl transform group-hover:scale-110 transition-transform"><i class="fas fa-file-alt"></i></div>
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-4 border-b border-white/10 pb-4">Form Optimization</h3>
+                        <p class="text-sm text-slate-300 mb-4">
+                            <span class="text-indigo-300 text-xs font-bold uppercase tracking-wider block mb-1">Connect to Wk 10: Local Fulfillment</span>
+                            If offering Cash on Delivery (COD), hide unnecessary credit card fields to speed up the process.
+                        </p>
+                        <p class="text-sm text-slate-400">
+                            Autocomplete addresses where possible.
+                        </p>
+                    </div>
+
+                    <!-- Trust & Speed -->
+                    <div class="glass-card p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl transform group-hover:scale-110 transition-transform"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="text-2xl font-bold text-emerald-400 mb-4 border-b border-white/10 pb-4">Trust & Speed</h3>
+                        <p class="text-sm text-slate-300 mb-4">
+                            <span class="text-emerald-300 text-xs font-bold uppercase tracking-wider block mb-1">Preview Wk 13: Security</span>
+                            Display security badges prominently.
+                        </p>
+                        <p class="text-sm text-slate-400">
+                            Ensure the final submit button gives immediate visual feedback (loading spinners) to prevent double-clicks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Assessment Activity -->
+        <div class="slide">
+            <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3">
+                    <div class="inline-block px-3 py-1 mb-4 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide border border-emerald-500/50 uppercase">
+                        Hands-on Application
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Week 7 Assessment Activity</h2>
+                    <h3 class="text-2xl text-slate-400 mb-8 font-light">Wireframe & User Flow Submission</h3>
+                    
+                    <p class="text-lg text-slate-300 mb-6">
+                        It's time to map out the visual journey based on our backend requirements.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-lg flex gap-4 items-start">
+                            <div class="bg-sky-500 text-slate-900 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">UI/UX Audit</h4>
+                                <p class="text-sm text-slate-400">Evaluate an existing local e-commerce site for friction points.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-lg flex gap-4 items-start">
+                            <div class="bg-indigo-500 text-slate-900 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">Wireframing</h4>
+                                <p class="text-sm text-slate-400">Sketch the layout grids for your team project's Product Page and Checkout flow.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 border border-slate-700 p-4 rounded-lg flex gap-4 items-start">
+                            <div class="bg-emerald-500 text-slate-900 rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-200">User Flow</h4>
+                                <p class="text-sm text-slate-400">Diagram the logic from "Item Clicked" &rarr; "Cart Updated" &rarr; "Checkout Confirmed".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <img src="https://careerfoundry.com/wp-content/uploads/old-blog-uploads/user-flow-beginning-2.png" 
+                         alt="User Flow Example" 
+                         class="rounded-xl w-full h-auto border-4 border-slate-800 shadow-2xl"
+                         onerror="this.src='https://placehold.co/600x800/1e293b/10b981?text=User+Flow+Diagram'">
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Questions -->
+        <div class="slide">
+            <div class="max-w-4xl mx-auto w-full text-center">
+                <i class="fas fa-comments text-6xl text-sky-400 mb-8 opacity-80"></i>
+                <h2 class="text-6xl md:text-8xl font-black mb-8">Questions?</h2>
+                <p class="text-2xl text-slate-400 mb-16 font-light">
+                    Let's discuss how your specific project features will translate to UI.
+                </p>
+                
+                <div class="mt-20 pt-10 border-t border-slate-800">
+                    <p class="text-lg font-semibold text-slate-300">IT 311: E-Commerce</p>
+                    <p class="text-slate-500">St. Mary’s College of Bansalan, Inc.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Image Sources -->
+        <div class="slide">
+            <div class="max-w-5xl mx-auto w-full">
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center">Image Sources</h2>
+                
+                <div class="glass-card p-8 text-sm overflow-y-auto max-h-[60vh] custom-scrollbar">
+                    <ul class="space-y-6 break-all">
+                        <li class="border-b border-slate-700 pb-4">
+                            <p class="text-sky-300 mb-1">https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/670c76675e202331a939d43a_what-is-a-design-system-cover.webp</p>
+                            <p class="text-slate-500 text-xs">Source: www.untitledui.com</p>
+                        </li>
+                        <li class="border-b border-slate-700 pb-4">
+                            <p class="text-sky-300 mb-1">https://www.slidekit.com/wp-content/uploads/2024/12/Free-Website-Mockup-Template-for-PowerPoint-Google-Slides.jpg</p>
+                            <p class="text-slate-500 text-xs">Source: www.slidekit.com</p>
+                        </li>
+                        <li class="border-b border-slate-700 pb-4">
+                            <p class="text-sky-300 mb-1">https://cdn.dribbble.com/userupload/46536397/file/68dc85d90f53ea3a4bac4c41830400b4.png?resize=752x&vertical=center</p>
+                            <p class="text-slate-500 text-xs">Source: dribbble.com</p>
+                        </li>
+                        <li class="border-b border-slate-700 pb-4">
+                            <p class="text-sky-300 mb-1">https://static.vecteezy.com/system/resources/previews/012/896/682/non_2x/3d-shop-trolley-icon-white-shopping-cart-with-red-megaphone-float-isolated-on-transparent-digital-market-online-e-commerce-concept-sale-promotion-business-cartoon-style-3d-render-png.png</p>
+                            <p class="text-slate-500 text-xs">Source: www.vecteezy.com</p>
+                        </li>
+                        <li>
+                            <p class="text-sky-300 mb-1">https://careerfoundry.com/wp-content/uploads/old-blog-uploads/user-flow-beginning-2.png</p>
+                            <p class="text-slate-500 text-xs">Source: careerfoundry.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="fixed bottom-6 right-6 flex gap-4 z-50">
+            <button id="prevBtn" class="bg-slate-800 hover:bg-slate-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg border border-slate-600 disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextBtn" class="bg-sky-600 hover:bg-sky-500 text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg shadow-sky-500/30 disabled:opacity-30 disabled:cursor-not-allowed">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Slide Counter -->
+        <div class="fixed bottom-6 left-6 z-50 bg-slate-800/80 backdrop-blur px-4 py-2 rounded-full border border-slate-700 text-sm font-medium text-slate-300">
+            <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">13</span>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const progressBar = document.getElementById('progress');
+            const currentSlideNum = document.getElementById('currentSlideNum');
+            const totalSlidesNum = document.getElementById('totalSlidesNum');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            totalSlidesNum.textContent = totalSlides;
+
+            function updateSlides() {
+                // Remove active class from all
+                slides.forEach(slide => slide.classList.remove('active'));
+                
+                // Add active to current
+                slides[currentSlide].classList.add('active');
+                
+                // Update Progress bar
+                const progressPercentage = ((currentSlide + 1) / totalSlides) * 100;
+                progressBar.style.width = `${progressPercentage}%`;
+                
+                // Update Counter
+                currentSlideNum.textContent = currentSlide + 1;
+                
+                // Update Button States
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+            }
+
+            function nextSlide() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    updateSlides();
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlides();
+                }
+            }
+
+            // Button Event Listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'Enter') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Initialize first state
+            updateSlides();
+        });
+    </script>
+</body>
+</html>
