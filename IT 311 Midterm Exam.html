@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IT 311 Midterm Exam</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<style>
+  :root {
+    --brand: #0d47a1;
+    --brand-light: #1976d2;
+    --bg: #f4f8fc;
+    --card-bg: #ffffff;
+    --text: #16233a;
+    --muted: #5b6b80;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1620; --card-bg: #17222f; --text: #e6edf5; --muted: #9fb0c3;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1620; --card-bg: #17222f; --text: #e6edf5; --muted: #9fb0c3;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body { background: var(--bg); color: var(--text); font-family: 'Georgia','Times New Roman', serif; }
+  header.hero {
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    color: #fff; padding: 2.5rem 1rem 2rem; border-bottom: 4px solid #bbdefb;
+  }
+  .test-title {
+    background: var(--brand); color: #fff; padding: .6rem 1rem;
+    border-radius: .5rem .5rem 0 0; font-weight: 700; letter-spacing: .5px;
+  }
+  .test-card {
+    background: var(--card-bg); border-radius: .5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08); margin-bottom: 2rem; overflow: hidden;
+  }
+  .q-row { border-bottom: 1px solid rgba(0,0,0,.07); padding: .9rem 1.25rem; }
+  .q-row:last-child { border-bottom: none; }
+  .q-num { font-weight: 700; color: var(--brand); margin-right: .4rem; }
+  .box-legend {
+    background: var(--card-bg); border-radius: .5rem; box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: .9rem;
+  }
+  .table-scroll { overflow-x: auto; }
+  .answer-line {
+    display: inline-block; border-bottom: 1px solid var(--muted);
+    min-width: 140px; margin-left: .5rem;
+  }
+  footer { color: var(--muted); text-align: center; padding: 2rem 1rem; font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<header class="hero text-center">
+  <h1 class="mb-1">IT 311 — E-Commerce</h1>
+  <div>Midterm Examination</div>
+  <div class="mt-1" style="opacity:.9;">St. Mary's College of Bansalan, Inc.</div>
+</header>
+
+<main class="container py-4" style="max-width: 900px;">
+
+  <section class="test-card">
+    <div class="test-title">Test I — Identification (1 pt each)</div>
+    <div id="test1"></div>
+  </section>
+
+  <section class="test-card">
+    <div class="test-title">Test II — Classification (1 pt each)</div>
+    <div class="p-3 pb-0">
+      <div class="box-legend">
+        <strong>A</strong> = Real-Time Data Handling &nbsp;·&nbsp; <strong>B</strong> = Handling Concurrency
+      </div>
+    </div>
+    <div id="test2"></div>
+  </section>
+
+  <section class="test-card">
+    <div class="test-title">Test III — Matching Type (2 pts each)</div>
+    <div class="p-3 pb-0">
+      <div class="box-legend table-scroll">
+        <table class="table table-sm table-borderless mb-0" style="font-size:.85rem;">
+          <tbody id="legendBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="test3"></div>
+  </section>
+
+</main>
+
+<footer>Answer on your exam sheet.</footer>
+
+<script>
+const legend = {
+  A: "Trust Building", B: "Audit Trail", C: "Pending", D: "Location Selection", E: "Scalability",
+  F: "Delivered", G: "Data Visualization", H: "State Maintenance", I: "Cancelled", J: "Session Security",
+  K: "Bulk Actions & Exports", L: "Cross-Device Persistence", M: "Packed", N: "Risk Mitigation", O: "Guest vs. Authenticated",
+  P: "Authentication States", Q: "Identity Verification", R: "Role-Based Access Control (RBAC)", S: "Failed Delivery Handling", T: "Shipped",
+  U: "Redis", V: "Status Tracking", W: "Scheduling", X: "Audit Logging", Y: "Low-Stock Alerts"
+};
+
+const test1 = [
+"What is the psychological journey that determines if it is intuitive to navigate from a product page to checkout?",
+"What is the minimum pixel size required for tap targets to prevent user frustration?",
+"What specific button should be the most vibrant element on the product landing page?",
+"What is the average e-commerce conversion rate?",
+"What is the visual layout, including buttons, menus, typography, and grids?",
+"What is identified as the #1 cause of cart abandonment?",
+"What percentage of e-commerce traffic is currently mobile?",
+"What should you use as the primary focal point on a product landing page according to visual hierarchy?",
+"What does the acronym CRO stand for in the presentation?"
+];
+
+const test2 = [
+"Temporarily holding stock for items mid-checkout, releasing the hold automatically if the session or payment times out.",
+"Using database transactions and row-level locking to prevent overselling.",
+"Choosing version-number checks or explicit row locks depending on how contested a given SKU's stock is likely to be.",
+"Triggering inventory updates immediately upon order confirmation inside the same database transaction.",
+"Guarding stock-deduction endpoints against duplicate submissions so one order can't decrement inventory twice.",
+"Ensuring relational tables correctly map product variations to accurate stock counts via proper foreign-key relationships.",
+"Preventing overselling when two users attempt to checkout the last unit at once.",
+"Generating automated dashboard notifications paired with scheduled email/SMS digests for inventory managers.",
+"Conducting periodic reconciliation jobs comparing recorded stock counts against physical warehouse counts."
+];
+
+const test3 = [
+"A competitor's site shows high bounce rates on the COD checkout page. What strategy, utilizing SMS/email OTP and order-value caps, should you implement to stop fake orders?",
+"A customer service representative needs to determine if an order can still be cancelled without penalty. Which status confirms the order has just been placed and is safe to cancel?",
+"Securely holding temporary cart data identified by a session ID in a cookie so items survive across tabs.",
+"A manager needs to investigate unauthorized price overrides on several products. Which backend mechanism provides the necessary accountability to determine who made these changes and when?",
+"Protecting session tokens using expiration policies and session-ID regeneration after login.",
+"Customers are frustrated because they arrive at a pickup branch only to find the item is unavailable. What specific UI component must be filtered by real-time branch-level stock availability to fix this?",
+"A store used alongside server-side session variables to securely hold temporary cart data.",
+"During a dispute resolution, a customer claims they cancelled an order before it shipped. What chronological record must you consult to accurately verify the timestamp and triggering actor of the transition?",
+"Saving authenticated cart state to the database so shopping can start on mobile and finish on desktop — the cart re-hydrates automatically on login.",
+"Your delivery fleet is losing money due to repeat no-shows. What operational logic must you develop to differentiate these users and limit logistics losses?",
+"The warehouse manager is assessing throughput efficiency and needs to count how many items are ready for the courier. Which specific status best justifies that an item is boxed and labeled but not yet en route?",
+"Resolving conflicts like duplicate items or differing quantities by merging a temporary guest cart with the permanent database cart on login.",
+"You must decide how to securely configure the new dashboard so that delivery staff cannot view inventory costs. What security architecture is best suited to restrict features per user type?",
+"Keeping a cart consistent across multiple servers as traffic grows by moving from in-memory sessions to a shared session store.",
+"An executive needs an at-a-glance summary of daily totals and orders-by-status to justify budget increases. What reporting approach is best suited to provide this sortable and filterable overview?",
+"Unlocking different features like saved addresses and order history based on anonymous, logged-in, and 'remembered' profiles.",
+"An in-store pickup branch experiences severe overcrowding during lunch hours. What specific mechanism, using slot capacity limits, must be used to manage this crowd control issue?",
+"What principle, using clear itemized totals and no upfront charges, must be applied to reduce cart abandonment caused by hidden fees at checkout?",
+"A customer calls asking for a tracking number. Which status provides the strongest evidence that the package has left the facility and is currently en route?",
+"The accounting department is struggling to reconcile daily cash remittances from riders. Which specific tracking approach, using 'cash collected' and 'cash remitted' checkpoints, is necessary to solve this issue?",
+"A customer complains that someone else picked up their pre-paid order. What process was likely bypassed and must be strictly enforced at pickup using a claim code and valid ID?"
+];
+
+function renderQ(id, arr, start, withLine) {
+  const el = document.getElementById(id);
+  el.innerHTML = arr.map((q,i) => `
+    <div class="q-row">
+      <span class="q-num">${start+i}.</span>${q}${withLine ? '<span class="answer-line">&nbsp;</span>' : ''}
+    </div>
+  `).join('');
+}
+
+renderQ('test1', test1, 1, false);
+renderQ('test2', test2, 10, true);
+renderQ('test3', test3, 19, true);
+
+document.getElementById('legendBody').innerHTML = (() => {
+  const entries = Object.entries(legend);
+  let rows = '';
+  for (let i = 0; i < entries.length; i += 3) {
+    rows += '<tr>' + entries.slice(i, i+3).map(([k,v]) => `<td><strong>${k}.</strong> ${v}</td>`).join('') + '</tr>';
+  }
+  return rows;
+})();
+</script>
+</body>
+</html>
