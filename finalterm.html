@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Commerce Cybersecurity, Privacy &amp; Marketing: Topics</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#101828;--accent:#4338ca;--accent-soft:#eef0ff;--mint:#0f9d77;--mint-soft:#e7f7f2;--line:#e4e7ec;--muted:#667085}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{font-family:"Public Sans",system-ui,sans-serif;background:#fff;color:#1d2939;line-height:1.7;font-size:1.05rem}
+h1,h2,h3,h4,.num{font-family:"Bricolage Grotesque","Public Sans",sans-serif;color:var(--ink);letter-spacing:-.02em}
+.topnav{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topnav .nav{flex-wrap:nowrap;overflow-x:auto;gap:.25rem;padding:.55rem 0}
+.topnav .nav-link{white-space:nowrap;color:var(--muted);font-weight:500;font-size:.92rem;border-radius:2rem;padding:.35rem .9rem}
+.topnav .nav-link:hover{color:var(--ink)}
+.topnav .nav-link.active{background:var(--ink);color:#fff}
+.hero{background:var(--ink);color:#fff;padding:5rem 0 4.5rem}
+.hero h1{color:#fff;font-weight:800;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.05;max-width:16ch}
+.hero p{color:#c3cad8;font-size:1.25rem;max-width:44ch;margin-top:1.25rem}
+.topic{padding:4.5rem 0;border-bottom:1px solid var(--line)}
+.rail{position:sticky;top:5.5rem}
+.num{font-size:5.5rem;font-weight:800;line-height:.9;color:var(--accent)}
+.rail h2{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:700;line-height:1.15;margin:.6rem 0 .5rem}
+.week{color:var(--muted);font-size:.95rem;margin-bottom:1.25rem}
+.slo{background:var(--mint-soft);border-radius:.75rem;padding:1.1rem 1.25rem;font-size:1rem}
+.slo h3{font-family:"Public Sans",sans-serif;font-size:.95rem;font-weight:700;color:var(--mint);margin-bottom:.35rem}
+.body h3{font-size:1.35rem;font-weight:700;margin-top:2rem}
+.body h3.h5{font-size:1.35rem!important}
+.body>h3:first-child{margin-top:0}
+.body p,.body li{max-width:68ch}
+.pill{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);border-radius:2rem;padding:.2rem .85rem;font-size:.9rem;font-weight:600;margin:0 .4rem .4rem 0}
+.callout{background:var(--accent-soft);border-radius:.75rem;padding:1.1rem 1.35rem;margin:1.5rem 0}
+.table{--bs-table-bg:transparent;border-color:var(--line);font-size:.97rem}
+.table thead th{background:transparent;color:var(--ink);border-bottom:2px solid var(--ink);font-weight:700}
+.table td,.table th{padding:.75rem .85rem}
+code{color:var(--accent);background:var(--accent-soft);padding:.1rem .35rem;border-radius:.3rem}
+footer{background:var(--ink);color:#aab3c5;padding:2rem 0;font-size:.9rem}
+a:focus-visible,.nav-link:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:991.98px){.rail{position:static}.num{font-size:4rem}.topic{padding:3rem 0}}
+@media print{.topnav{display:none}.rail{position:static}section{break-inside:avoid-page}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="90" tabindex="0">
+<nav class="topnav sticky-top" id="topnav" aria-label="Topics"><div class="container"><ul class="nav"><li class="nav-item"><a class="nav-link" href="#t1">1 Threats</a></li><li class="nav-item"><a class="nav-link" href="#t2">2 Sessions</a></li><li class="nav-item"><a class="nav-link" href="#t3">3 RA 10173</a></li><li class="nav-item"><a class="nav-link" href="#t4">4 Marketing &amp; SEO</a></li><li class="nav-item"><a class="nav-link" href="#t5">5 Analytics &amp; CRO</a></li><li class="nav-item"><a class="nav-link" href="#t6">6 Final defense</a></li><li class="nav-item"><a class="nav-link" href="#integration">Summary</a></li></ul></div></nav>
+<header class="hero"><div class="container"><h1>Securing and growing an online store</h1><p>Six topics on cybersecurity, data privacy, digital marketing and analytics.</p></div></header>
+<main class="container">
+<section id="t1" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">1</div><h2>Introduction to e-commerce cybersecurity and threat landscapes</h2><p class="week">Foundation topic</p><div class="slo"><h3>Student learning outcome</h3>Identify cybersecurity threats in e-commerce and establish foundational practices for protecting customer data.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <h3 class="h5">Why e-commerce is a target</h3>
+    <p>Online stores process payment details, addresses, phone numbers and purchase histories in one place, and they are reachable by anyone on the internet at any hour. Attackers favour them because the payoff is direct: stolen card data can be sold, stolen accounts can be used to place fraudulent orders, and a disabled store can be held for ransom during peak sales periods.</p>
+    <h3 class="h5">The security foundation: the CIA triad</h3>
+    <p>Every control in this course supports one of three goals. <strong>Confidentiality</strong> means only authorised people see the data. <strong>Integrity</strong> means data and prices cannot be altered without detection. <strong>Availability</strong> means the store stays online and usable. A threat is best understood by asking which of the three it breaks.</p>
+  </div>
+  <h3 class="h5 mt-4">Common threats</h3>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Threat</th><th>How it works</th><th>Typical impact</th></tr></thead>
+    <tbody>
+      <tr><td>Phishing and social engineering</td><td>Deceptive emails, messages or fake login pages trick staff or customers into giving up credentials.</td><td>Account takeover, admin access</td></tr>
+      <tr><td>SQL injection</td><td>Untrusted input is run as part of a database query.</td><td>Mass data exposure or modification</td></tr>
+      <tr><td>Cross-site scripting (XSS)</td><td>Malicious script is injected into pages other users view.</td><td>Session theft, defaced pages</td></tr>
+      <tr><td>Payment skimming (Magecart style)</td><td>Malicious script on checkout pages copies card details as they are typed.</td><td>Card data theft, chargebacks</td></tr>
+      <tr><td>Credential stuffing</td><td>Leaked username and password pairs are tried automatically on other sites.</td><td>Account takeover, loyalty point fraud</td></tr>
+      <tr><td>Denial of service (DDoS)</td><td>Traffic floods overwhelm the store.</td><td>Lost sales, reputational damage</td></tr>
+      <tr><td>Malware and ransomware</td><td>Malicious software encrypts or steals business data.</td><td>Downtime, extortion</td></tr>
+      <tr><td>Insider misuse</td><td>Staff or contractors misuse legitimate access.</td><td>Data leakage, fraud</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">Foundational protective practices</h3>
+  <ul class="prose">
+    <li><strong>Encrypt in transit and at rest.</strong> Serve every page over HTTPS with current TLS, and encrypt stored sensitive fields.</li>
+    <li><strong>Minimise what you collect.</strong> Data that is never stored cannot be stolen. Use a certified payment processor so card numbers never touch your servers.</li>
+    <li><strong>Least privilege.</strong> Give each user and system only the access it needs.</li>
+    <li><strong>Patch and update.</strong> Keep the platform, plugins and libraries current.</li>
+    <li><strong>Strong authentication.</strong> Require multi-factor authentication for administrators.</li>
+    <li><strong>Backups and monitoring.</strong> Keep tested offline backups and log security events.</li>
+  </ul>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Threat modeling exercises</span><span class="pill">Lecture discussion</span></p>
+  <p class="prose">In threat modeling, students draw a simple data-flow diagram of a store (browser, web server, database, payment gateway) and mark trust boundaries. At each boundary they ask what could go wrong, a method often organised as STRIDE: spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. The output is a ranked list of threats with a proposed control for each.</p>
+  <div class="callout"><strong>Study questions.</strong> Which part of the CIA triad does credential stuffing most directly attack? Why does using an external payment processor reduce risk? Name two trust boundaries in a typical online store.</div>
+</div></div></section>
+<section id="t2" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">2</div><h2>Secure session management and attack prevention</h2><p class="week">Technical defence topic</p><div class="slo"><h3>Student learning outcome</h3>Apply cybersecurity best practices to secure authentication states and prevent data hijacking in e-commerce platforms.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <h3 class="h5">What a session is</h3>
+    <p>HTTP does not remember users between requests. After login, the server issues a session identifier, usually stored in a cookie, and the browser sends it back with every request. Whoever holds that identifier is treated as the logged-in user, which is why stealing or guessing it is called session hijacking.</p>
+    <h3 class="h5">Attacks on authentication state</h3>
+    <ul>
+      <li><strong>Session hijacking:</strong> the identifier is stolen through XSS, network sniffing on unencrypted connections, or malware.</li>
+      <li><strong>Session fixation:</strong> the attacker plants a known identifier before the victim logs in, then reuses it.</li>
+      <li><strong>Cross-site request forgery (CSRF):</strong> a malicious site causes the victim's browser to send an authenticated request, such as changing a delivery address.</li>
+      <li><strong>Brute force and credential stuffing:</strong> automated login attempts against accounts.</li>
+      <li><strong>Insecure direct object references:</strong> changing an order number in a URL reveals another customer's order.</li>
+    </ul>
+  </div>
+  <h3 class="h5 mt-3">Countermeasures</h3>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Control</th><th>What it prevents</th></tr></thead>
+    <tbody>
+      <tr><td>Cookie flags: <code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code></td><td>Cookie theft over plain HTTP, theft by scripts, and cross-site request abuse</td></tr>
+      <tr><td>Regenerate the session ID at login and privilege change</td><td>Session fixation</td></tr>
+      <tr><td>Long random identifiers from a secure generator</td><td>Guessing or predicting sessions</td></tr>
+      <tr><td>Idle and absolute timeouts; full invalidation on logout</td><td>Reuse of stale or abandoned sessions</td></tr>
+      <tr><td>Anti-CSRF tokens</td><td>Forged state-changing requests</td></tr>
+      <tr><td>Input validation, parameterised queries, output encoding</td><td>SQL injection and XSS</td></tr>
+      <tr><td>Content Security Policy (CSP)</td><td>Injected or unauthorised scripts</td></tr>
+      <tr><td>Rate limiting, lockouts, multi-factor authentication</td><td>Brute force and credential stuffing</td></tr>
+      <tr><td>Server-side authorisation checks on every request</td><td>Insecure direct object references</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Vulnerability assessment exercises</span><span class="pill">Code auditing</span></p>
+  <p class="prose">Students scan a deliberately vulnerable practice application in a safe lab, document each finding with severity and evidence, and recommend fixes. In the code audit they read login and checkout code looking for weaknesses such as string-built SQL queries, session IDs that never change, or cookies set without protective flags. Reports follow a standard form: finding, risk, steps to reproduce, and remediation. Testing is limited to the supplied lab environment, because testing real sites without permission is illegal.</p>
+  <div class="callout"><strong>Study questions.</strong> Why does regenerating the session ID at login stop session fixation? What does <code>HttpOnly</code> protect against, and what does it not? How does an anti-CSRF token work?</div>
+</div></div></section>
+<section id="t3" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">3</div><h2>Compliance with the Philippine Data Privacy Act (RA 10173)</h2><p class="week">Legal and governance topic</p><div class="slo"><h3>Student learning outcome</h3>Integrate mandatory privacy policies, user consent workflows and secure data retention mechanisms aligning with RA 10173.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <h3 class="h5">The law at a glance</h3>
+    <p>Republic Act No. 10173, the Data Privacy Act of 2012, protects the personal information of individuals and regulates how organisations collect, use, store and share it. It is enforced by the National Privacy Commission (NPC). An online store that handles customers' names, addresses, contact details or payment information is a <em>personal information controller</em> and carries legal duties, even when it is small.</p>
+    <h3 class="h5">Key terms</h3>
+    <ul>
+      <li><strong>Data subject:</strong> the individual the information is about, such as a customer.</li>
+      <li><strong>Personal information controller:</strong> the organisation that decides how and why data is processed.</li>
+      <li><strong>Personal information processor:</strong> a party that processes data on the controller's behalf, such as a hosting or email provider.</li>
+      <li><strong>Sensitive personal information:</strong> a stricter category with higher protection requirements.</li>
+    </ul>
+    <h3 class="h5">General privacy principles</h3>
+    <p>The Act requires processing to follow <strong>transparency</strong> (people know what happens to their data), <strong>legitimate purpose</strong> (processing is lawful and matches the declared purpose) and <strong>proportionality</strong> (only the data needed is collected and kept).</p>
+  </div>
+  <h3 class="h5 mt-3">Turning the law into store features</h3>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Requirement</th><th>Implementation in an e-commerce platform</th></tr></thead>
+    <tbody>
+      <tr><td>Privacy notice</td><td>A clear, plain-language policy linked from sign-up and checkout stating what is collected, why, who receives it and for how long.</td></tr>
+      <tr><td>Consent</td><td>Unticked checkboxes, separate consent for marketing, a stored record of when and what the user agreed to, and a simple way to withdraw.</td></tr>
+      <tr><td>Data subject rights</td><td>Self-service or request-based access, correction, erasure or blocking, and data portability where applicable, plus the right to object and to file a complaint.</td></tr>
+      <tr><td>Data minimisation</td><td>Remove form fields that are not needed; avoid collecting data "just in case".</td></tr>
+      <tr><td>Retention</td><td>A defined retention schedule, automated deletion or anonymisation after the period, and secure disposal of backups.</td></tr>
+      <tr><td>Security measures</td><td>Organisational, physical and technical safeguards: encryption, access control, logging and staff training.</td></tr>
+      <tr><td>Accountability</td><td>A designated Data Protection Officer, privacy impact assessments and written agreements with processors.</td></tr>
+      <tr><td>Breach response</td><td>An incident plan with notification to the NPC and affected individuals within the period the rules require (generally 72 hours from knowledge of a reportable breach).</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><strong>Related laws.</strong> Students should also be aware of the E-Commerce Act (RA 8792) on electronic transactions and the Cybercrime Prevention Act (RA 10175), which defines offences such as illegal access and data interference. Verify current NPC circulars and thresholds before applying them to a real business, because regulations are updated.</div>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Compliance policy drafting</span><span class="pill">Legal case studies</span></p>
+  <p class="prose">In policy drafting, students write a privacy notice and consent flow for a fictional store, then trade drafts for peer review against a compliance checklist. In the case studies they examine publicly reported privacy incidents, identifying which principles were breached, what harm followed, and what controls or procedures would have reduced the damage.</p>
+  <div class="callout"><strong>Study questions.</strong> What is the difference between a controller and a processor? Why should marketing consent be separate from the consent needed to complete an order? What belongs in a retention schedule?</div>
+</div></div></section>
+<section id="t4" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">4</div><h2>Data-driven digital marketing and SEO integration</h2><p class="week">Growth topic</p><div class="slo"><h3>Student learning outcome</h3>Evaluate digital marketing strategies and integrate Search Engine Optimization (SEO) to maximize user engagement and business profitability.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <h3 class="h5">The digital marketing channel mix</h3>
+    <p>No single channel fits every store. Students learn to compare channels by cost, speed, scale and measurability.</p>
+  </div>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Channel</th><th>Strength</th><th>Limitation</th></tr></thead>
+    <tbody>
+      <tr><td>Search engine optimisation</td><td>Durable, low cost per visit over time</td><td>Slow to show results</td></tr>
+      <tr><td>Paid search and social ads</td><td>Fast, targetable, scalable</td><td>Costs rise with competition; stops when spend stops</td></tr>
+      <tr><td>Email marketing</td><td>High return, owned audience</td><td>Requires consent and list hygiene</td></tr>
+      <tr><td>Social media and content</td><td>Builds brand and community</td><td>Reach depends on platform algorithms</td></tr>
+      <tr><td>Influencer and affiliate</td><td>Borrowed trust, performance-based pay</td><td>Quality and disclosure must be managed</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">SEO in three layers</h3>
+  <ul class="prose">
+    <li><strong>Technical SEO:</strong> crawlable site structure, XML sitemap, fast page loads, mobile-friendly design, HTTPS, canonical URLs and structured data (product schema) so search engines understand listings.</li>
+    <li><strong>On-page SEO:</strong> keyword research based on buyer intent, unique titles and meta descriptions, descriptive headings, useful product descriptions and clear image alt text.</li>
+    <li><strong>Off-page SEO:</strong> earning links and mentions from reputable sites, and managing reviews and local listings.</li>
+  </ul>
+  <h3 class="h5 mt-4">Where security and SEO meet</h3>
+  <p class="prose">The two disciplines support each other more than students expect. HTTPS is a ranking signal and a trust cue. A hacked site that injects spam links can be flagged by search engines and lose its visibility. Consent banners and tracking scripts affect page speed and what data can be collected. A profitable strategy measures return on ad spend (ROAS), customer acquisition cost (CAC) and customer lifetime value (CLV), and keeps all data collection within privacy law.</p>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Discussions</span><span class="pill">System optimization exercises</span></p>
+  <p class="prose">Discussions compare channel strategies for different business types, such as a local food seller versus a fashion brand. In the optimisation exercises, students audit a sample store, fix title tags, site structure and speed problems, and report the expected effect on traffic and revenue.</p>
+  <div class="callout"><strong>Study questions.</strong> Why can CAC exceeding CLV make a growing store unprofitable? Give one way a security failure can hurt search rankings. Which marketing activities require explicit consent?</div>
+</div></div></section>
+<section id="t5" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">5</div><h2>Customer analytics and conversion rate optimization (CRO)</h2><p class="week">Analysis topic</p><div class="slo"><h3>Student learning outcome</h3>Analyze customer behavioral data and metric pipelines to formulate strategies that optimize conversion rates.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <h3 class="h5">The metric pipeline</h3>
+    <p>Analytics begins with events: page views, searches, add-to-cart actions, checkout steps and purchases. These are collected by tracking tools, stored, cleaned and summarised into metrics and dashboards. Poor data at the start produces misleading decisions at the end, so students examine each stage for accuracy and privacy.</p>
+  </div>
+  <h3 class="h5 mt-3">Core e-commerce metrics</h3>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Metric</th><th>Meaning</th><th>Use</th></tr></thead>
+    <tbody>
+      <tr><td>Conversion rate</td><td>Orders divided by sessions</td><td>Overall store effectiveness</td></tr>
+      <tr><td>Cart abandonment rate</td><td>Carts created but not purchased</td><td>Finds checkout friction</td></tr>
+      <tr><td>Average order value</td><td>Revenue divided by orders</td><td>Guides bundling and upsell offers</td></tr>
+      <tr><td>Bounce rate and engagement</td><td>Visitors who leave without interacting</td><td>Checks landing page relevance</td></tr>
+      <tr><td>Customer lifetime value</td><td>Expected revenue from a customer over time</td><td>Sets acquisition budgets</td></tr>
+      <tr><td>Return and retention rates</td><td>Share of customers who come back</td><td>Measures loyalty and satisfaction</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">Optimising conversion</h3>
+  <ul class="prose">
+    <li><strong>Funnel analysis</strong> to find the step where most shoppers drop out.</li>
+    <li><strong>Segmentation</strong> by source, device, location or behaviour, since averages hide differences.</li>
+    <li><strong>A/B testing</strong> with a single clear hypothesis, a sufficient sample, and a fixed test duration to avoid premature conclusions.</li>
+    <li><strong>Friction reduction</strong> through guest checkout, fewer form fields, visible shipping costs, local payment options and trust signals.</li>
+    <li><strong>Privacy-aware measurement:</strong> aggregate or pseudonymise data where possible and honour consent choices.</li>
+  </ul>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Analytics simulation</span><span class="pill">Group discussions</span></p>
+  <p class="prose">In the simulation, groups receive a dataset of sessions and orders, build a funnel, identify the weakest step and propose two tests with expected outcomes. Group discussions then challenge the conclusions: is the sample large enough, could another factor explain the change, and does the proposed tracking respect user consent?</p>
+  <div class="callout"><strong>Study questions.</strong> A store has 20,000 sessions and 400 orders; what is its conversion rate? Why is segmentation important before drawing conclusions? What makes an A/B test result unreliable?</div>
+</div></div></section>
+<section id="t6" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><div class="num">6</div><h2>Final e-commerce marketing and privacy strategy defense</h2><p class="week">Capstone</p><div class="slo"><h3>Student learning outcome</h3>Defend a comprehensive e-commerce strategy prioritizing data-driven marketing profitability and strict adherence to data privacy frameworks.</div></div></aside><div class="col-lg-8 body">
+  
+  
+  
+  <div class="prose">
+    <p>The capstone combines everything in the course. Teams present a complete strategy for a real or fictional online business and defend it before an evaluation panel.</p>
+  </div>
+  <h3 class="h5 mt-3">Expected components</h3>
+  <ol class="prose">
+    <li>Business model, target customers and value proposition.</li>
+    <li>Threat model and the security controls that address the top risks.</li>
+    <li>Session and authentication design.</li>
+    <li>Privacy compliance plan: notice, consent flows, rights handling, retention schedule and breach response.</li>
+    <li>Marketing plan with channel mix, SEO approach and budget.</li>
+    <li>Analytics and CRO plan with metrics, test roadmap and targets.</li>
+    <li>Risks, trade-offs and a realistic implementation timeline.</li>
+  </ol>
+  <h3 class="h5 mt-4">Suggested evaluation rubric</h3>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Criterion</th><th>What a strong submission shows</th></tr></thead>
+    <tbody>
+      <tr><td>Security soundness</td><td>Realistic threats, justified controls, secure authentication</td></tr>
+      <tr><td>Privacy compliance</td><td>Correct application of RA 10173 principles and rights</td></tr>
+      <tr><td>Marketing and profitability</td><td>Credible channel choices and unit economics</td></tr>
+      <tr><td>Data and analytics</td><td>Meaningful metrics and testable hypotheses</td></tr>
+      <tr><td>Defence and communication</td><td>Clear answers to panel questions and honest handling of trade-offs</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">Teaching and learning activities</h3>
+  <p><span class="pill">Strategy defense</span><span class="pill">Capstone presentations</span></p>
+  <p class="prose">Defence matters because strategy involves trade-offs. A panelist might ask how the team would respond if a marketing tool required data the privacy policy does not allow. A strong answer names the conflict, picks a side with reasons, and offers a compliant alternative.</p>
+</div></div></section>
+<section id="integration" class="topic"><div class="row g-4 g-xl-5"><aside class="col-lg-4"><div class="rail"><h2>Integration and summary</h2></div></aside><div class="col-lg-8 body">
+  
+  <div class="prose">
+    <p>The topics form one chain. Threat awareness (Topic 1) shapes the technical controls in Topic 2. Both feed the privacy compliance work in Topic 3, because security safeguards are a legal duty as well as a technical one. That trust-based foundation makes responsible marketing (Topic 4) and measurement (Topic 5) possible, and the final defence (Topic 6) tests whether students can balance them.</p>
+  </div>
+  <div class="table-responsive"><table class="table table-bordered">
+    <thead><tr><th>Skill progression</th><th>Level</th><th>Topics</th></tr></thead>
+    <tbody>
+      <tr><td>Identify and establish</td><td>Foundational</td><td>1</td></tr>
+      <tr><td>Apply and integrate</td><td>Practical</td><td>2, 3</td></tr>
+      <tr><td>Evaluate and analyze</td><td>Analytical</td><td>4, 5</td></tr>
+      <tr><td>Defend</td><td>Synthesis</td><td>6</td></tr>
+    </tbody>
+  </table></div>
+  <h3 class="h5 mt-4">Key takeaways</h3>
+  <ul class="prose">
+    <li>Security protects revenue by protecting customer trust.</li>
+    <li>Privacy compliance is a design requirement, built into forms, databases and workflows from the start.</li>
+    <li>Marketing and analytics are most effective when they use only data the business is entitled to collect.</li>
+    <li>Strategies should be defended with evidence and an honest account of trade-offs.</li>
+  </ul>
+</div></div></section>
+</main>
+<footer><div class="container">Legal references are for study purposes; check current regulations before applying them to a real business.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
