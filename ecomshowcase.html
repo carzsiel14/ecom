@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IT 311 E-Commerce Showcase</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
 
   <!-- Bootstrap 5 + Icons + Font -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,9 +14,8 @@
   <style>
     :root {
       --green: #2e9e5b;
-      --green-light: #e6f5ec;
       --blue: #3f6fc6;
-      --blue-dark: #2b4c91;
+      --blue-dark: #1e4fa8;
       --ink: #1f2937;
     }
     body {
@@ -24,9 +24,9 @@
       background: #f1f5f9;
     }
 
-    /* ---------- Hero ---------- */
+    /* ---------- Hero (blue & white) ---------- */
     .hero {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 55%, var(--green) 100%);
+      background: linear-gradient(135deg, #0a2f6e 0%, var(--blue-dark) 50%, var(--blue) 100%);
       color: #fff;
       padding: 3.5rem 0 6rem;
       position: relative;
@@ -40,19 +40,12 @@
     }
     .hero::before { width: 320px; height: 320px; top: -120px; right: -80px; }
     .hero::after  { width: 220px; height: 220px; bottom: -100px; left: -60px; }
-    .logo-box {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, .15);
-      border: 2px dashed rgba(255, 255, 255, .7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      letter-spacing: 1px;
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      display: block;
       margin: 0 auto 1rem;
-      backdrop-filter: blur(4px);
+      filter: drop-shadow(0 .5rem 1rem rgba(0, 0, 0, .3));
     }
     .hero h1 { font-weight: 700; }
     .hero .lead { opacity: .9; font-weight: 400; }
@@ -95,19 +88,12 @@
     .flier {
       width: 100%;
       aspect-ratio: 1 / 1;
-      background: linear-gradient(145deg, var(--blue) 0%, var(--blue-dark) 100%);
+      background: var(--blue-dark);
       border: 2px solid var(--blue-dark);
       border-radius: .75rem;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       overflow: hidden;
     }
-    .flier i { font-size: 2.5rem; opacity: .85; margin-bottom: .5rem; }
-    .flier img { width: 100%; height: 100%; object-fit: cover; }
+    .flier img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .intro-title { font-weight: 600; font-size: 1.05rem; }
     .intro-list { list-style: none; padding: 0; margin: 0; font-size: .9rem; }
@@ -128,7 +114,7 @@
   <!-- ===== Hero / Header ===== -->
   <header class="hero text-center">
     <div class="container position-relative">
-      <div class="logo-box">LOGO</div>
+      <img src="logo.svg" alt="IT311 E-Commerce logo" class="logo-img">
       <h1 class="display-6">IT 311 E-Commerce Showcase</h1>
       <p class="lead mb-0">Explore the online stores built by our class</p>
     </div>
@@ -143,21 +129,18 @@
         <article class="showcase-card">
           <span class="card-badge">SITE 01</span>
           <div class="flier mb-4 mt-2">
-            <!-- Replace with: <img src="flier1.jpg" alt="Site 1 flier"> -->
-            <i class="bi bi-image"></i>
-            <h2 class="h5 mb-1">1080x1080</h2>
-            <p class="mb-0">SITE flier</p>
+            <img src="flier1.svg" alt="BrewBox sample flier">
           </div>
           <h3 class="intro-title text-center mb-3">Website introduction</h3>
           <ul class="intro-list mb-4">
-            <li><i class="bi bi-dash-lg"></i>What the online store is about</li>
-            <li><i class="bi bi-dash-lg"></i>Products or services offered</li>
-            <li><i class="bi bi-dash-lg"></i>Key features of the website</li>
-            <li><i class="bi bi-dash-lg"></i>Why customers should visit</li>
+            <li><i class="bi bi-dash-lg"></i>BrewBox is an online coffee shop</li>
+            <li><i class="bi bi-dash-lg"></i>Sells freshly roasted beans and gift sets</li>
+            <li><i class="bi bi-dash-lg"></i>Easy ordering with home delivery</li>
+            <li><i class="bi bi-dash-lg"></i>Perfect for coffee lovers on the go</li>
           </ul>
           <div class="card-footer-area">
             <hr>
-            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://site-one.com</a></p>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://brewbox.example.com</a></p>
           </div>
         </article>
       </div>
@@ -167,21 +150,18 @@
         <article class="showcase-card">
           <span class="card-badge">SITE 02</span>
           <div class="flier mb-4 mt-2">
-            <!-- Replace with: <img src="flier2.jpg" alt="Site 2 flier"> -->
-            <i class="bi bi-image"></i>
-            <h2 class="h5 mb-1">1080x1080</h2>
-            <p class="mb-0">SITE flier</p>
+            <img src="flier2.svg" alt="PawPal Pets sample flier">
           </div>
           <h3 class="intro-title text-center mb-3">Website introduction</h3>
           <ul class="intro-list mb-4">
-            <li><i class="bi bi-dash-lg"></i>What the online store is about</li>
-            <li><i class="bi bi-dash-lg"></i>Products or services offered</li>
-            <li><i class="bi bi-dash-lg"></i>Key features of the website</li>
-            <li><i class="bi bi-dash-lg"></i>Why customers should visit</li>
+            <li><i class="bi bi-dash-lg"></i>PawPal Pets is a one-stop pet store</li>
+            <li><i class="bi bi-dash-lg"></i>Food, treats, toys and grooming items</li>
+            <li><i class="bi bi-dash-lg"></i>Shop by pet type and size</li>
+            <li><i class="bi bi-dash-lg"></i>Made for happy, healthy furry friends</li>
           </ul>
           <div class="card-footer-area">
             <hr>
-            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://site-two.com</a></p>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://pawpal.example.com</a></p>
           </div>
         </article>
       </div>
@@ -191,21 +171,18 @@
         <article class="showcase-card">
           <span class="card-badge">SITE 03</span>
           <div class="flier mb-4 mt-2">
-            <!-- Replace with: <img src="flier3.jpg" alt="Site 3 flier"> -->
-            <i class="bi bi-image"></i>
-            <h2 class="h5 mb-1">1080x1080</h2>
-            <p class="mb-0">SITE flier</p>
+            <img src="flier3.svg" alt="StyleLoop sample flier">
           </div>
           <h3 class="intro-title text-center mb-3">Website introduction</h3>
           <ul class="intro-list mb-4">
-            <li><i class="bi bi-dash-lg"></i>What the online store is about</li>
-            <li><i class="bi bi-dash-lg"></i>Products or services offered</li>
-            <li><i class="bi bi-dash-lg"></i>Key features of the website</li>
-            <li><i class="bi bi-dash-lg"></i>Why customers should visit</li>
+            <li><i class="bi bi-dash-lg"></i>StyleLoop is an online fashion boutique</li>
+            <li><i class="bi bi-dash-lg"></i>New arrivals and seasonal sales</li>
+            <li><i class="bi bi-dash-lg"></i>Easy returns and secure checkout</li>
+            <li><i class="bi bi-dash-lg"></i>Trendy looks for every day</li>
           </ul>
           <div class="card-footer-area">
             <hr>
-            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://site-three.com</a></p>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://styleloop.example.com</a></p>
           </div>
         </article>
       </div>
@@ -215,21 +192,18 @@
         <article class="showcase-card">
           <span class="card-badge">SITE 04</span>
           <div class="flier mb-4 mt-2">
-            <!-- Replace with: <img src="flier4.jpg" alt="Site 4 flier"> -->
-            <i class="bi bi-image"></i>
-            <h2 class="h5 mb-1">1080x1080</h2>
-            <p class="mb-0">SITE flier</p>
+            <img src="flier4.svg" alt="TechNest sample flier">
           </div>
           <h3 class="intro-title text-center mb-3">Website introduction</h3>
           <ul class="intro-list mb-4">
-            <li><i class="bi bi-dash-lg"></i>What the online store is about</li>
-            <li><i class="bi bi-dash-lg"></i>Products or services offered</li>
-            <li><i class="bi bi-dash-lg"></i>Key features of the website</li>
-            <li><i class="bi bi-dash-lg"></i>Why customers should visit</li>
+            <li><i class="bi bi-dash-lg"></i>TechNest is a gadget and electronics store</li>
+            <li><i class="bi bi-dash-lg"></i>Audio gear, wearables and accessories</li>
+            <li><i class="bi bi-dash-lg"></i>Smart prices with a 1-year warranty</li>
+            <li><i class="bi bi-dash-lg"></i>Upgrade your tech the easy way</li>
           </ul>
           <div class="card-footer-area">
             <hr>
-            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://site-four.com</a></p>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://technest.example.com</a></p>
           </div>
         </article>
       </div>
