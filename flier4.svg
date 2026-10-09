@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" font-family="Poppins, 'Segoe UI', Arial, Helvetica, sans-serif">
+  <title>TechNest sample flier</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a2f6e"/>
+      <stop offset="1" stop-color="#2a6fd6"/>
+    </linearGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#ffffff" fill-opacity="0.14"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <rect width="1080" height="1080" fill="url(#dots)"/>
+  <circle cx="990" cy="90" r="260" fill="#ffffff" fill-opacity="0.07"/>
+  <circle cx="50" cy="1010" r="240" fill="#ffffff" fill-opacity="0.07"/>
+
+  <rect x="70" y="56" width="520" height="48" rx="24" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="96" y="89" font-size="22" font-weight="700" letter-spacing="3" fill="#ffffff">IT311 E-COMMERCE SHOWCASE</text>
+  <text x="1010" y="89" text-anchor="end" font-size="24" font-weight="700" letter-spacing="2" fill="#ffffff">SITE 04</text>
+
+  <circle cx="540" cy="380" r="254" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <circle cx="540" cy="380" r="220" fill="#ffffff" filter="url(#shadow)"/>
+  <g>
+  <path d="M410 430V400A130 130 0 0 1 670 400V430" fill="none" stroke="#1e4fa8" stroke-width="20" stroke-linecap="round"/>
+  <rect x="385" y="400" width="52" height="110" rx="22" fill="#1e4fa8"/>
+  <rect x="643" y="400" width="52" height="110" rx="22" fill="#1e4fa8"/>
+  <path d="M480 440Q540 500 600 440" fill="none" stroke="#3f6fc6" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 22"/>
+</g>
+
+  <text x="540" y="730" text-anchor="middle" font-size="100" font-weight="800" fill="#ffffff">TechNest</text>
+  <text x="540" y="790" text-anchor="middle" font-size="34" font-weight="400" fill="#ffffff" fill-opacity="0.92">Smart gadgets at smart prices</text>
+
+  <rect x="204" y="836" width="139" height="56" rx="28" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/><text x="274" y="873" text-anchor="middle" font-size="26" font-weight="600" fill="#ffffff">Audio</text><rect x="366" y="836" width="199" height="56" rx="28" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/><text x="465" y="873" text-anchor="middle" font-size="26" font-weight="600" fill="#ffffff">Wearables</text><rect x="586" y="836" width="289" height="56" rx="28" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/><text x="731" y="873" text-anchor="middle" font-size="26" font-weight="600" fill="#ffffff">1-Year Warranty</text>
+
+  <rect x="140" y="940" width="800" height="92" rx="46" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="540" y="999" text-anchor="middle" font-size="34" font-weight="700" fill="#0a2f6e">SHOP NOW  &#8226;  technest.example.com</text>
+</svg>

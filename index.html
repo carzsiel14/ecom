@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT 311 E-Commerce Showcase</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+
+  <!-- Bootstrap 5 + Icons + Font -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #2e9e5b;
+      --blue: #3f6fc6;
+      --blue-dark: #1e4fa8;
+      --ink: #1f2937;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--ink);
+      background: #f1f5f9;
+    }
+
+    /* ---------- Hero (blue & white) ---------- */
+    .hero {
+      background: linear-gradient(135deg, #0a2f6e 0%, var(--blue-dark) 50%, var(--blue) 100%);
+      color: #fff;
+      padding: 3.5rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .08);
+    }
+    .hero::before { width: 320px; height: 320px; top: -120px; right: -80px; }
+    .hero::after  { width: 220px; height: 220px; bottom: -100px; left: -60px; }
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(0 .5rem 1rem rgba(0, 0, 0, .3));
+    }
+    .hero h1 { font-weight: 700; }
+    .hero .lead { opacity: .9; font-weight: 400; }
+
+    /* ---------- Cards grid ---------- */
+    .cards-wrap { margin-top: -4rem; padding-bottom: 4rem; position: relative; z-index: 2; }
+
+    .showcase-card {
+      background: #ececec;
+      border: 2px solid var(--green);
+      border-radius: 2rem;
+      padding: 1.25rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s ease, box-shadow .25s ease;
+      box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .08);
+      position: relative;
+    }
+    .showcase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 1.25rem 2.25rem rgba(46, 158, 91, .25);
+    }
+    .card-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .3rem 1rem;
+      border-radius: 50rem;
+      letter-spacing: .5px;
+      box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .15);
+    }
+
+    /* 1080 x 1080 flier */
+    .flier {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--blue-dark);
+      border: 2px solid var(--blue-dark);
+      border-radius: .75rem;
+      overflow: hidden;
+    }
+    .flier img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .intro-title { font-weight: 600; font-size: 1.05rem; }
+    .intro-list { list-style: none; padding: 0; margin: 0; font-size: .9rem; }
+    .intro-list li { padding: .3rem 0; color: #4b5563; display: flex; align-items: flex-start; }
+    .intro-list i { color: var(--green); margin-right: .5rem; line-height: 1.5; }
+
+    .card-footer-area { margin-top: auto; }
+    .card-footer-area hr { border-top: 2px solid #111; opacity: .8; margin: 1rem 0; }
+    .url-line { font-size: .9rem; word-break: break-all; }
+    .url-line a { color: var(--blue-dark); text-decoration: none; font-weight: 500; }
+    .url-line a:hover { text-decoration: underline; }
+
+    footer { color: #6b7280; font-size: .85rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Hero / Header ===== -->
+  <header class="hero text-center">
+    <div class="container position-relative">
+      <img src="logo.svg" alt="IT311 E-Commerce logo" class="logo-img">
+      <h1 class="display-6">IT 311 E-Commerce Showcase</h1>
+      <p class="lead mb-0">Explore the online stores built by our class</p>
+    </div>
+  </header>
+
+  <!-- ===== Cards ===== -->
+  <main class="container cards-wrap">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 gy-5">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <article class="showcase-card">
+          <span class="card-badge">SITE 01</span>
+          <div class="flier mb-4 mt-2">
+            <img src="flier1.svg" alt="BrewBox sample flier">
+          </div>
+          <h3 class="intro-title text-center mb-3">Website introduction</h3>
+          <ul class="intro-list mb-4">
+            <li><i class="bi bi-dash-lg"></i>BrewBox is an online coffee shop</li>
+            <li><i class="bi bi-dash-lg"></i>Sells freshly roasted beans and gift sets</li>
+            <li><i class="bi bi-dash-lg"></i>Easy ordering with home delivery</li>
+            <li><i class="bi bi-dash-lg"></i>Perfect for coffee lovers on the go</li>
+          </ul>
+          <div class="card-footer-area">
+            <hr>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://brewbox.example.com</a></p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <article class="showcase-card">
+          <span class="card-badge">SITE 02</span>
+          <div class="flier mb-4 mt-2">
+            <img src="flier2.svg" alt="PawPal Pets sample flier">
+          </div>
+          <h3 class="intro-title text-center mb-3">Website introduction</h3>
+          <ul class="intro-list mb-4">
+            <li><i class="bi bi-dash-lg"></i>PawPal Pets is a one-stop pet store</li>
+            <li><i class="bi bi-dash-lg"></i>Food, treats, toys and grooming items</li>
+            <li><i class="bi bi-dash-lg"></i>Shop by pet type and size</li>
+            <li><i class="bi bi-dash-lg"></i>Made for happy, healthy furry friends</li>
+          </ul>
+          <div class="card-footer-area">
+            <hr>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://pawpal.example.com</a></p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <article class="showcase-card">
+          <span class="card-badge">SITE 03</span>
+          <div class="flier mb-4 mt-2">
+            <img src="flier3.svg" alt="StyleLoop sample flier">
+          </div>
+          <h3 class="intro-title text-center mb-3">Website introduction</h3>
+          <ul class="intro-list mb-4">
+            <li><i class="bi bi-dash-lg"></i>StyleLoop is an online fashion boutique</li>
+            <li><i class="bi bi-dash-lg"></i>New arrivals and seasonal sales</li>
+            <li><i class="bi bi-dash-lg"></i>Easy returns and secure checkout</li>
+            <li><i class="bi bi-dash-lg"></i>Trendy looks for every day</li>
+          </ul>
+          <div class="card-footer-area">
+            <hr>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://styleloop.example.com</a></p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <article class="showcase-card">
+          <span class="card-badge">SITE 04</span>
+          <div class="flier mb-4 mt-2">
+            <img src="flier4.svg" alt="TechNest sample flier">
+          </div>
+          <h3 class="intro-title text-center mb-3">Website introduction</h3>
+          <ul class="intro-list mb-4">
+            <li><i class="bi bi-dash-lg"></i>TechNest is a gadget and electronics store</li>
+            <li><i class="bi bi-dash-lg"></i>Audio gear, wearables and accessories</li>
+            <li><i class="bi bi-dash-lg"></i>Smart prices with a 1-year warranty</li>
+            <li><i class="bi bi-dash-lg"></i>Upgrade your tech the easy way</li>
+          </ul>
+          <div class="card-footer-area">
+            <hr>
+            <p class="url-line text-center mb-0"><strong>URL:</strong> <a href="#">https://technest.example.com</a></p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="text-center pb-4">
+    &copy; IT 311 E-Commerce Showcase
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
