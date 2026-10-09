@@ -1,16 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" font-family="Poppins, 'Segoe UI', Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" font-family="Poppins, 'Segoe UI', Arial, Helvetica, sans-serif">
   <title>IT311 E-Commerce logo</title>
-  <circle cx="200" cy="200" r="190" fill="#ffffff" stroke="#1e4fa8" stroke-width="12"/>
-  <circle cx="200" cy="200" r="166" fill="none" stroke="#3f6fc6" stroke-width="3" stroke-dasharray="3 10" stroke-linecap="round"/>
-  <text x="200" y="100" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="6" fill="#3f6fc6">E-COMMERCE</text>
-  <g transform="translate(0,-8)">
-    <path d="M152 170H318L292 255H178Z" fill="#dbe8fb"/>
-    <rect x="190" y="185" width="22" height="55" rx="6" fill="#3f6fc6"/>
-    <rect x="228" y="185" width="22" height="55" rx="6" fill="#1e4fa8"/>
-    <rect x="266" y="185" width="14" height="55" rx="6" fill="#3f6fc6"/>
-    <path d="M105 135H145L178 255H292L318 170H152" fill="none" stroke="#1e4fa8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="195" cy="290" r="16" fill="#1e4fa8"/>
-    <circle cx="275" cy="290" r="16" fill="#1e4fa8"/>
+  <defs>
+    <radialGradient id="disc" cx="50%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#4a90f0"/>
+      <stop offset="0.55" stop-color="#1e5bc0"/>
+      <stop offset="1" stop-color="#0a2f6e"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9ddfb"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe8fb"/>
+    </linearGradient>
+    <path id="arc" d="M64 256A192 192 0 0 1 448 256"/>
+  </defs>
+
+  <!-- outer white ring + blue disc -->
+  <circle cx="256" cy="256" r="252" fill="url(#ring)"/>
+  <circle cx="256" cy="256" r="236" fill="url(#disc)"/>
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+
+  <!-- curved top lettering -->
+  <text font-size="27" font-weight="700" letter-spacing="8" fill="#ffffff" text-anchor="middle">
+    <textPath href="#arc" startOffset="50%">E-COMMERCE</textPath>
+  </text>
+
+  <g transform="translate(0,-12)">
+    <!-- circuit traces (the "IT" side) -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M72 210H118L140 232H190"/>
+      <path d="M60 256H188"/>
+      <path d="M72 302H118L140 280H190"/>
+      <path d="M440 210H394L372 232H322"/>
+      <path d="M452 256H324"/>
+      <path d="M440 302H394L372 280H322"/>
+    </g>
+    <g fill="#ffffff">
+      <circle cx="72" cy="210" r="9"/>
+      <circle cx="60" cy="256" r="9"/>
+      <circle cx="72" cy="302" r="9"/>
+      <circle cx="440" cy="210" r="9"/>
+      <circle cx="452" cy="256" r="9"/>
+      <circle cx="440" cy="302" r="9"/>
+    </g>
+
+    <!-- shopping bag -->
+    <path d="M226 202V178A30 30 0 0 1 286 178V202" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+    <path d="M196 196H316L330 320Q331 334 317 334H195Q181 334 182 320Z" fill="url(#bag)"/>
+    <circle cx="226" cy="212" r="5.5" fill="#2b62c0"/>
+    <circle cx="286" cy="212" r="5.5" fill="#2b62c0"/>
+
+    <!-- click cursor -->
+    <path transform="translate(238,240) scale(1.25)" d="M0 0L0 52L13 40L24 66L36 61L25 36L44 36Z" fill="#1e4fa8" stroke="#1e4fa8" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- sparkles -->
+    <path d="M368 150L373 164L387 169L373 174L368 188L363 174L349 169L363 164Z" fill="#ffffff"/>
+    <path d="M148 158L151 167L160 170L151 173L148 182L145 173L136 170L145 167Z" fill="#ffffff" fill-opacity="0.85"/>
   </g>
-  <text x="200" y="347" text-anchor="middle" font-size="54" font-weight="800" letter-spacing="2" fill="#1e4fa8">IT311</text>
+
+  <!-- wordmark -->
+  <text x="256" y="414" text-anchor="middle" font-size="72" font-weight="800" letter-spacing="3" fill="#ffffff">IT311</text>
+  <rect x="196" y="430" width="120" height="6" rx="3" fill="#9cc4ff"/>
 </svg>
